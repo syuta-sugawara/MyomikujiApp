@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyomikujiApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,67 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HX-dx-Ydm">
+                                <rect key="frame" x="87" y="167" width="200" height="200"/>
+                                <color key="backgroundColor" red="1" green="0.42428058867559748" blue="0.36528148206437172" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="97Q-jx-3Jj"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="UD8-1P-hgm"/>
+                                    <constraint firstAttribute="height" constant="200" id="fYF-Kz-2lt"/>
+                                    <constraint firstAttribute="width" constant="200" id="kaz-h6-7li"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ux-hg-1vq">
+                                <rect key="frame" x="126" y="387" width="123" height="30"/>
+                                <state key="normal" title="あなたの運勢は？"/>
+                                <connections>
+                                    <action selector="getOmikuji:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1HC-iY-WLT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5HX-dx-Ydm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="500" id="2Fa-Kz-OJb"/>
+                            <constraint firstItem="5HX-dx-Ydm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="4WU-ck-CGe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5HX-dx-Ydm" secondAttribute="bottom" constant="400" id="6nh-Mq-8dR"/>
+                            <constraint firstItem="5HX-dx-Ydm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="7ef-nF-6TO"/>
+                            <constraint firstItem="5HX-dx-Ydm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="8hM-eF-fdH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5HX-dx-Ydm" secondAttribute="bottom" constant="500" id="F6Y-sF-dOb"/>
+                            <constraint firstItem="5HX-dx-Ydm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Fzo-fk-Jqu"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="5HX-dx-Ydm" secondAttribute="bottom" constant="200" id="Ihi-Ky-eyB"/>
+                            <constraint firstItem="1Ux-hg-1vq" firstAttribute="top" secondItem="5HX-dx-Ydm" secondAttribute="bottom" constant="8" symbolic="YES" id="KfB-oN-ymB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5HX-dx-Ydm" secondAttribute="bottom" constant="300" id="Xff-js-6tn"/>
+                            <constraint firstItem="5HX-dx-Ydm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="400" id="csq-8n-fGv"/>
+                            <constraint firstItem="5HX-dx-Ydm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="dsK-zg-9Ic"/>
+                            <constraint firstItem="1Ux-hg-1vq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eeX-2y-byb"/>
+                            <constraint firstItem="5HX-dx-Ydm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="hf9-92-F5T"/>
+                            <constraint firstItem="5HX-dx-Ydm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ntb-tb-mqM"/>
+                            <constraint firstItem="5HX-dx-Ydm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="phP-fm-qaN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5HX-dx-Ydm" secondAttribute="bottom" constant="300" id="r4d-AB-yo9"/>
+                            <constraint firstItem="5HX-dx-Ydm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r9J-eW-hYT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5HX-dx-Ydm" secondAttribute="bottom" constant="8" symbolic="YES" id="sLP-7r-iN1"/>
+                            <constraint firstItem="5HX-dx-Ydm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="sUP-di-IUn"/>
+                            <constraint firstItem="1Ux-hg-1vq" firstAttribute="top" secondItem="5HX-dx-Ydm" secondAttribute="bottom" constant="20" id="tcl-1x-D7g"/>
+                            <constraint firstItem="5HX-dx-Ydm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tuy-yC-Ek1"/>
+                            <constraint firstItem="5HX-dx-Ydm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vb6-eb-drV"/>
+                            <constraint firstItem="5HX-dx-Ydm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="300" id="w3O-nA-TdJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5HX-dx-Ydm" secondAttribute="bottom" constant="100" id="weP-a4-jod"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5HX-dx-Ydm" secondAttribute="bottom" constant="200" id="xUi-qm-pnU"/>
+                            <constraint firstItem="5HX-dx-Ydm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xtL-kw-NLB"/>
+                            <constraint firstItem="5HX-dx-Ydm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="300" id="yUr-7u-QtN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myLabel" destination="5HX-dx-Ydm" id="3mi-wE-imr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
